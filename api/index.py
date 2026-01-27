@@ -5,6 +5,8 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
+# Load .env file if it exists (for local development)
+# In production (Vercel), environment variables are set directly
 load_dotenv()
 
 app = FastAPI()
