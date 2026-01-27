@@ -84,62 +84,13 @@ Got everything in place? Let's move on!
 </details>
 
 <details>
-  <summary>⚙️ Full-Stack Setup (Backend + Frontend)</summary>
-
-### Backend Setup with uv
+  <summary>⚙️ Backend Setup with uv</summary>
 
 1. Install the [`uv`](https://github.com/astral-sh/uv) package manager (`pip install uv`). `uv` will download and manage Python 3.12 for you the first time you run a project command.
 2. From the project root, install dependencies with `uv sync`. This creates `.venv/` (and fetches Python 3.12 automatically if needed).
-3. Set your OpenAI API key in the shell before running the server:
-   ```bash
-   export OPENAI_API_KEY=sk-your-key-here
-   ```
-4. Start the backend directly from the project root with:
-   ```bash
-   uv run uvicorn api.index:app --reload
-   ```
-   The server will run on `http://localhost:8000` with auto-reload enabled for development.
-5. Additional backend details live in [`api/README.md`](api/README.md).
-
-### Frontend Setup (React)
-
-The frontend is a React application that connects to the FastAPI backend.
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-   The frontend will run on `http://localhost:3000` and automatically open in your browser.
-
-4. The frontend is pre-configured to connect to the backend at `http://localhost:8000` (see [`frontend/.env.development`](frontend/.env.development)).
-
-5. For detailed frontend documentation, see [`frontend/README.md`](frontend/README.md).
-
-### Running Both Together
-
-**Terminal 1 - Backend:**
-```bash
-export OPENAI_API_KEY=sk-your-key-here
-uv run uvicorn api.index:app --reload
-```
-
-**Terminal 2 - Frontend:**
-```bash
-cd frontend
-npm start
-```
-
-Now you can chat with your AI mental coach at `http://localhost:3000`! 🎉
+3. Set your OpenAI API key in the shell before running the server, for example `export OPENAI_API_KEY=sk-...`.
+4. Start the backend directly from the project root with `uv run uvicorn api.index:app --reload`. The server will run on `http://localhost:8000` with auto-reload enabled for development.
+5. Additional backend details live in `api/README.md`.
 
 </details>
 
